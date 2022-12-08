@@ -4,7 +4,7 @@ public class Lelu_Tehtava {
 	public static void main(String[] args) {
 		
 		//Lelu Lelu1 = new Lelu();
-		Lelu VieteriLelu = new Lelu();
+		Lelu VieteriLelu = new VieteriLelu();
 		//Lelu1.Print();
 		VieteriLelu.Print();
 		
@@ -18,7 +18,7 @@ public class Lelu_Tehtava {
 		int Paino = 1;
 		
 		
-		protected void Print() {
+		public void Print() {
 			
 			System.out.println("Lelun nimi on " + Nimi + " ja se painaa " + Paino + "kg");
 			
@@ -55,7 +55,7 @@ public class Lelu_Tehtava {
 		public void Print() {
 			
 			System.out.println(Nopeus);
-			System.out.println("VITTU");
+			System.out.println("TESTI");
 		}
 
 		
