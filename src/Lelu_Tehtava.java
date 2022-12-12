@@ -3,10 +3,12 @@ public class Lelu_Tehtava {
 
 	public static void main(String[] args) {
 		
-		//Lelu Lelu1 = new Lelu();
-		Lelu VieteriLelu = new VieteriLelu();
-		//Lelu1.Print();
-		VieteriLelu.Print();
+		Lelu Lelu1 = new Lelu();
+		Lelu Vieteri = new Vieterilelu();
+		Lelu1.Print();
+		
+		Vieteri.Print();
+		
 		
 	}
 
@@ -26,37 +28,48 @@ public class Lelu_Tehtava {
 		}
 		} //Lelu ends
 	
-	class VieteriLelu extends Lelu {
+	class Vieterilelu extends Lelu {
 		
 	
 		private boolean Viritetty;
 		private int Nopeus;
 		private int Kiihdyta;
 		
-		public VieteriLelu() {
+		public Vieterilelu() {
 		
-			String Nimi = "Automobiili";
-			int Paino = 1;
-			Viritetty = true;
+
+			Viritetty = false;
 			Nopeus = 0;
 			Kiihdyta = 0;
+			}
+		
+		public void Viritetty() {
+			if (Viritetty == true) {
+			System.out.println("Automobiili on viritetty"); 
+			Nopeus++;
+			}
 			
+			else {
+				System.out.println("Automobiilia ei ole viritetty");
+			}
 		}
 		
 		public void Kiihdyta(int Kiihdyta) {
-			Kiihdyta = Nopeus +1;
+			if (Viritetty == true) {
+			Kiihdyta = Nopeus +1; }
 			
 		}
 		
 		public void Nopeus(int Nopeus) {
-			
-			System.out.println("Auton vauhti " + Nopeus);
+			Kiihdyta(Nopeus);
+			System.out.println("Automobiilin vauhti on " + Nopeus);
 		}
 		@Override
 		public void Print() {
+			Viritetty();
+			Nopeus(Nopeus);
 			
-			System.out.println(Nopeus);
-			System.out.println("TESTI");
+			
 		}
 
 		
