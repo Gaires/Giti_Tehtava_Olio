@@ -52,6 +52,7 @@ public class Lelu_Tehtava {
 			
 			System.out.println("Auton vauhti " + Nopeus);
 		}
+		@Override
 		public void Print() {
 			
 			System.out.println(Nopeus);
